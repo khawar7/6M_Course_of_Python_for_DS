@@ -1,0 +1,32 @@
+my name is khawar zaman and i have done my bs is statistics for the qua university that is the most perstigeous 
+uni in the pakistan.
+
+The datasets library in Python provides a unified API for loading and working with datasets. It supports a wide variety 
+of built-in datasets, including popular datasets like CIFAR-10, MNIST, and ImageNet. To load a built-in dataset, you can
+ use the load_dataset() function.
+Here's an example of how to load the CIFAR-10 dataset using the datasets library:
+
+from datasets import load_dataset
+# Load the CIFAR-10 dataset
+```{Python}
+cifar10 = load_dataset("cifar10")
+```
+The load_dataset() function returns a DatasetDict object, which contains the dataset in a dictionary format. The Dataset
+Dict object has a train key that contains the training data, a test key that contains the test data, and a validation 
+key that contains the validation data.
+Here's an example of how to access the training data from the DatasetDict object:
+
+# Get the training data
+train_data = cifar10["train"]
+The train_data object is a Dataset object, which contains the data in a tabular format. The Dataset object has columns for each feature in the dataset. For example, the CIFAR-10 dataset has columns for the image, the label, and the image ID.
+
+Here's an example of how to access the image data from the Dataset object:
+# Get the image data
+images = train_data["image"]
+The images object is a NumPy array that contains the image data. Each image is represented as a 32x32 pixel array of RGB
+ values.
+
+The datasets library also provides a number of methods for working with datasets, such as methods for splitting datasets
+,shuffling datasets, and batching datasets. For more information on the datasets library, please refer to the official 
+documentation.
+
